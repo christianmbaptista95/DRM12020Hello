@@ -3,6 +3,7 @@ package com.example.drm12020hello
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ActionMode
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +24,12 @@ class MainActivity : AppCompatActivity() {
             i.putExtra("nome digitado",nome)
 
             startActivity(i)
+            }
         }
+
+    override fun onResume() {
+        super.onResume()
+        edtNome.text.clear()
     }
+
 }
